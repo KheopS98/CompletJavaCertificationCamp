@@ -1,12 +1,13 @@
 <h3>CompletJavaCertificationCamp</h3>
 
 <h3>**Module_1**</h3>
-<pre><code>
-<ul>
-  <li>Variables</li>
-  <li>DataTypes</li>
-  <li>Course Arrays/ Oracle Arrays</li> 
+<table>
+  <tr>
+    <th>Variables</th>
+    <th>DataTypes</th>
+    <th>Course Arrays/ Oracle Arrays</th>
+  </tr>
+  </table>
 
 
-</ul>
-</code></pre>
+
