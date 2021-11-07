@@ -1,142 +1,147 @@
 package oracle_tutorials;
+import java.lang.reflect.Array;
 import java.util.*;
-
 public class ArraysDemo {
-    public static void main(String[] args) {
-        // Declaring an Array of Integers.
-        int[] anArray;
+    public static void main(String[]args){
+        // Declare an Array;
+        int[] anArray; //declaration;
 
-        // Allocate memory for 10 integer elements.
+        // Allocate memory for 10 elements;
         anArray = new int[10];
 
-        // Initialize the first element.
-        anArray[0] = 100; // index 0 = 1 element
-        // Initialize the second element.
-        anArray[1] = 200; // index 1 = 2 element
-        // so on.
-        anArray[2] = 300; // index 2 = 3 element
-        anArray[3] = 400; // index 3 = 4 element
-        anArray[4] = 500; // index 4 = 5 element
-        anArray[5] = 600; // index 5 = 6 element
-        anArray[6] = 700; // index 6 = 7 element
-        anArray[7] = 800; // index 7 = 8 element
-        anArray[8] = 900; // index 8 = 9 element
-        anArray[9] = 1000; // index 9 = 10 element
+        // Initialize the first element;
+        anArray[0] = 100;
 
-        System.out.println("Element at index 0 :" + anArray[0]); // 100
-        System.out.println("Element at index 1 :" + anArray[1]); // 200
-        System.out.println("Element at index 2 :" + anArray[2]); // 300
-        System.out.println("Element at index 3 :" + anArray[3]); // 400
-        System.out.println("Element at index 4 :" + anArray[4]); // 500
-        System.out.println("Element at index 5 :" + anArray[5]); // 600
-        System.out.println("Element at index 6 :" + anArray[6]); // 700
-        System.out.println("Element at index 7 :" + anArray[7]); // 800
-        System.out.println("Element at index 8 :" + anArray[8]); // 900
-        System.out.println("Element at index 9 :" + anArray[9]); // 1000
-       //  System.out.println("Element at index 10 :" + anArray[10]); IndexOutOfBoundsException
+        // Initialize the second element;
+        anArray[1] = 200;
+
+        // And so for;
+        anArray[2] = 300;
+        anArray[3] = 400;
+        anArray[4] = 500;
+        anArray[5] = 600;
+        anArray[6] = 700;
+        anArray[7] = 800;
+        anArray[8] = 900;
+        anArray[9] = 1_000;
+
+        System.out.println("Element at index 0: " + anArray[0]); // 100;
+        System.out.println("Element at index 1: " + anArray[1]); // 200;
+        System.out.println("Element at index 2: " + anArray[2]); // 300;
+        System.out.println("Element at index 3: " + anArray[3]); // 400;
+        System.out.println("Element at index 4: " + anArray[4]); // 500;
+        System.out.println("Element at index 5: " + anArray[5]); // 600;
+        System.out.println("Element at index 6: " + anArray[6]); // 700;
+        System.out.println("Element at index 7: " + anArray[7]); // 800;
+        System.out.println("Element at index 8: " + anArray[8]); // 900;
+        System.out.println("Element at index 9: " + anArray[9]); // 1000;
+        //  System.out.println("Element at index 10 :" + anArray[10]); IndexOutOfBoundsException;
 
 
         /*
-        * The Array Declaration has 2 elements:
-        * type[] arrayName
-        * [] special symbol that indicates that this variable holds an array.
-        * The size of array is not specified in the declaration.
-        * At declaration, doesn't actually create the array, it's simply tells the compiler that this variable will hold an Array of Specific Type[].
-        * */
+         * The Array Declaration has 2 elements;
+         * type[] arrayName;
+         * [] special symbol that indicates that this variable holds an array;
+         * The size of array is not specified in the declaration;
+         * At declaration, doesn't actually create the array, it's simply tells the compiler that this variable will hold an Array of Specific Type[];
+         * */
 
-        // Declaring Variables that Refer to an Array
+        byte[] byteArray;
+        short[] shortArray;
+        int[] intArray;
+        long[] longArray;
+        String[] StringArray;
+        boolean[] boolArray;
+        char[] charArray;
+        float[] floatArray;
+        double[] doubleArray;
 
-        byte[] anArrayOfBytes;
-        short[] anArrayOfShorts;
-        int[] anArrayOfInt;
-        long[] anArrayOfLongs;
-        float[] anArrayOfFloats;
-        double[] anArrayOfDoubles;
+        System.out.println("Arrays Created!");
 
-        boolean[] anArrayOfBooleans;
-
-        char[] anArrayOfChars;
-
-        String[] anArrayOfStrings;
-        // System.out.println(anArrayOfBytes); anArrayOfBytes might not be initialized. have nothing to be printed, any value, it's just a reference.
-
-        // Create an array of integers with 10 elements.
-        anArray = new int[10];
-
-        // Shortcut for creating and initialize an Array
-        int[] shortArray = {1,2,3,4,5,6}; //
-        System.out.println("First & Last elements: " + shortArray[0] + " " + shortArray[shortArray.length - 1]);
-
-        // Creating MultiDimensional Arrays
-        int[][] multiArray = new int[3][3]; // 3 rows , 3 columns.
         /*
-        * r0 |0 | 0 | 0|
-        * r1 |0 | 0 | 0|
-        * r2 |0 | 0 | 0|
+        * Shortcut to Declare and Initialize an Array;
+        * Here the length of the array is determined by  the number of values provided between braces and separated by commas;
+        * You can also declare and initialize multidimensional arrays with  this shortcut form;
         * */
 
-        /* Crating MultiDimensional Arrays with the Shortcut */
+        int[] someOtherArray = {100,200,300,400,500,600,700,800,900,1000};
+        System.out.println("someOhterArray first:" + someOtherArray[0] + " and last: " + someOtherArray[9]);
 
         String[][] names = {
-                {"Ms.", "Mr.", "Sir."},
-                {"John", "Lindsey", "Josh"}
+                {"Mr.", "Ms.", "Mrs."},
+                {"Smith", "Jones", "Harley"}
         };
 
-        System.out.println("Result is: " + names[0][0] + " " + names[1][1]); //Ms. Lindesy
-        System.out.println("Result is: " + names[0][1] + " " + names[1][0]); // Mr. John
+        // Combine some names;
+        System.out.println(names[0][2] + " " + names[1][2]); // Mrs. Harley;
+        System.out.println(names[0][1] + " " + names[1][1]); // Ms. Jones;
+
+        // Build-in length property to determine the size of an array;
+        System.out.println("The length of names array is:" + names.length); // 2, beceause we have 2 rows
+        System.out.println("The length of names array[0] is:" + names[0].length); // 3, Mr, Ms, Mrs
+        System.out.println("The length of names array[1] is:" + names[1].length); // 3, Smith, Jones, Harley
+
+        // Creating MultiDimensional Arrays;
+        int[][] multiArray = new int[3][3]; // 3 rows , 3 columns.
+        /*
+         * r0 |0 | 0 | 0|
+         * r1 |0 | 0 | 0|
+         * r2 |0 | 0 | 0|
+         * */
+
 
         /*
-         * Build-in Property to determine the size of an Array  (array.length)
-         * Quiz: Determine the size of anArray
-        */
-
-        System.out.println("The size of the Array is: " + anArray.length);
-
-        /*
-        * Copying Arrays
-        * public static void arrayCopy(Object src, int srcPosition,
-        *                              Object dest, int destPos,int length);
-        * Object src, dest -> arrayCopyFrom, arrayCopyTo
-        * srcPosition -> start position arrayCopyFrom
-        * destPos ->start position in the arrayCopyTo
-        * length -> number of array elements to copy.
+        * Copying Arrays with System.arrayCopy
+        *
+        * public static void arrayCopy(Object src, int srcPos,
+        *                              Object dest, int destPos, int length);
         * */
-        System.out.println("\n");
 
-        int[] arrayCopyFrom = {1,3,5,7,9,11,12,13};
-        // Print out arrayCopyFrom
-        for (int i = 0; i < arrayCopyFrom.length - 1; i++) {
-            System.out.println("Array CopyFrom: "+ i +" " + arrayCopyFrom[i]);
+        String[] copyFrom = {"Affogato", "Americano", "Cappuccino", "Corretto", "Cortado",
+                "Doppio", "Espresso", "Frappucino", "Freddo", "Lungo", "Macchiato",
+                "Marocchino", "Ristretto" };
+        System.out.println("\nPriting CopyFrom!\n");
+        for (int i = 0; i < copyFrom.length - 1; i++) {
+            System.out.println("|"+ copyFrom[i] + "|");
         }
 
-        System.out.println("\n");
+        String[] copyTo = new String[copyFrom.length];
+        System.arraycopy(copyFrom, 4, copyTo, 0, 5);
 
-        // Copy intro arrayCopyTo from position 2
-        int[] arrayCopyTo = new int[10];
-        System.arraycopy(arrayCopyFrom, 2,arrayCopyTo,0,5);
 
-        for (int i = 0; i < arrayCopyTo.length - 1; i++) {
-            System.out.println("Array CopyTo: "+ i + " " + arrayCopyTo[i]);
+        System.out.println("\nPriting CopyTo!\n");
 
+        // Printing the Array's CopyTo Elements;
+        for (int i = 0; i < copyTo.length - 1; i++) {
+            System.out.println("|"+ copyTo[i] + "|"); // Look! The last 7 positions are null. Because String is an Object, so the default values for an object is null;
         }
 
-        System.out.println();
+        //Doing the same exercise from above with a different function from java.util.arrays.copyOfRange(Object src, int startPos, lastPos);
+        System.out.println("\nPriting CopyTo2!\n");
+        String copyTo2[] = Arrays.copyOfRange(copyFrom,0, copyFrom.length -3 ); // CopyFrom except the last 3 elements;
+        for (int i = 0; i < copyTo2.length - 1 ; i++) {
+            System.out.println("|"+ copyTo2[i] + "|");
+        }
 
-        //Simplest method to print a array.
-        System.out.println(Arrays.toString(arrayCopyTo));
+        // Converting an Array to a String with Arrays.toString();
+        System.out.println("\n Printing with Array.toString(): " + Arrays.toString(copyFrom) + "\n");
 
-        String[] array = new String[3];
-        System.out.println("ce zice:" + array[3]);
+        /*
+        * Searching an array for a specific value to get the index at which is placed / Arrays.binarySearch();
+        * Comparing 2 arrays to determine is they are equal or not / Arrays.equals(arr1, arr2);
+        * Fill an array to place a specific value at each index / Arrays.fill();
+        * */
 
+        System.out.println("copyFrom = copyTo2? : " + Arrays.equals(copyFrom,copyTo2)); // I guess it just compare if they have the same number of elements.
+        String copyToEqual[] = Arrays.copyOfRange(copyFrom,0, copyFrom.length);
 
+        System.out.println("CopyFrom length: " + copyFrom.length);
+        System.out.println("CopyTo3 length: " + copyToEqual.length);
 
+        System.out.println(Arrays.toString(copyFrom));
+        System.out.println("\n--------------------");
+        System.out.println(Arrays.toString(copyToEqual));
 
-
-
-
-
-
-
-
+        System.out.println("copyFrom = copyToEqual? : " + Arrays.equals(copyFrom, copyToEqual));
     }
 }
