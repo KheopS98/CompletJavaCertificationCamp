@@ -2,11 +2,11 @@
 
 <h3>**Module_1**</h3>
 <table>
-  
-  <tr>Variables</tr>
-  <tr>DataTypes</tr>
-  <tr>Course Arrays/ Oracle Arrays</tr>
-  
+  <tr>
+    <th>Variables</th>
+    <th>DataTypes</th>
+    <th>Course Arrays/ Oracle Arrays</th>
+  </tr>
   </table>
 
 
