@@ -3,15 +3,15 @@
 <h3>**Module_1**</h3>
 <table>
   <tr>
-    <th>Variables</th> 
+    <td>Variables</td> 
   </tr>
   
   <tr>
-    <th>DataTypes</th>
+    <td>DataTypes</td>
   </tr>
   
   <tr>
-    <th>Course Arrays/ Oracle Arrays</th>
+    <td>Course Arrays/ Oracle Arrays</td>
   </tr>
   </table>
 
