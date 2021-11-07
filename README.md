@@ -2,16 +2,17 @@
 
 <h3>**Module_1**</h3>
 <table>
+  <th>Index for Course</th>
   <tr>
-    <td>Variables</td> 
+    <td>I.1. Variables</td> 
   </tr>
   
   <tr>
-    <td>DataTypes</td>
+    <td>I.2. DataTypes</td>
   </tr>
   
   <tr>
-    <td>Course Arrays/ Oracle Arrays</td>
+    <td>I.3. Course Arrays/ Oracle Arrays</td>
   </tr>
   </table>
 
