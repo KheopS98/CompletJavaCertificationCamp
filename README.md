@@ -1,6 +1,7 @@
 <h3>CompletJavaCertificationCamp</h3>
 
-<h3> Module_1 </h3>
+<h3>**Module_1**</h3>
+<pre><code>
 <ul>
   <li>Variables</li>
   <li>DataTypes</li>
@@ -8,3 +9,4 @@
 
 
 </ul>
+</code></pre>
