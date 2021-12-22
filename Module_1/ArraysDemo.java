@@ -143,5 +143,50 @@ public class ArraysDemo {
         System.out.println(Arrays.toString(copyToEqual));
 
         System.out.println("copyFrom = copyToEqual? : " + Arrays.equals(copyFrom, copyToEqual));
+        
+        
+        System.out.println("\n\n");
+
+
+        /*
+         * java.util.Arrays
+         * Arrays.toString(baseArray);
+         * Arrays.sort(baseArray); // sorting an array in ascending order
+         * Arrays.binarySearch(baseArray); // return an index integer if found, else return -1, Arrays.Sort() must be used first in order to find it.
+         * Arrays.asList(baseArray); // return a list by a given array, both array and list refer to the same location.
+         * */
+
+        // Arrays.toString(baseArray)
+        Integer [] integerArray = { 2, 4, 3, 7, 21, 9, 98, 76, 74 };
+        System.out.printf("integerArray elements: %s\n", Arrays.toString(integerArray)); // integerArray elements: [2, 4, 3, 7, 21, 9, 98, 76, 74]
+        System.out.println("Integer Array" + Arrays.toString(integerArray));
+        System.out.println("\n\n");
+
+
+        // Arrays.asList(baseArray)
+        List<Integer> integerList = Arrays.asList(integerArray);
+        System.out.println("Integer List size:" + integerList.size());
+        System.out.println("List Elements:");
+        for (int i = 0; i < integerList.size() - 1; i++) {
+            System.out.println("List element: " + integerList.get(i));
+        }
+        System.out.println("\n\n");
+
+
+        // Arrays.sort(baseArray)
+        int[] sortedArray = new int[integerArray.length];
+        System.arraycopy(integerArray,0,sortedArray,0,integerArray.length);
+
+        //printing unsorted
+        for (int i = 0; i < integerArray.length - 1; i++) {
+            System.out.println("Integer Array Unsorted: "+ integerArray[i]);
+        }
+
+        Arrays.sort(sortedArray);
+
+        for (int i = 0; i < sortedArray.length - 1; i++) {
+            System.out.println("Sorted Array: " + sortedArray[i]);
+        }
+        
     }
 }
